@@ -40,7 +40,7 @@ All parameters and trial settings are consistent to design in Zhaoping and Acker
 2. Screen display
 
 <div align=center>
-	<img width="800" height="430" src="screen_display.jpg"/>
+	<img width="800" height="430" src="https://github.com/CnDE-M/Psychtoolbox3-3d_Anaglyph_RDS/blob/master/image/screen_display.jpg"/>
 </div>
 
 + Plane
@@ -59,36 +59,40 @@ Gaze fixation so that frame will reflect into whether central or peripheral visi
 ### Experiment Process:
 
 <div align=center>
-	<img width="800" height="381" src="experiment_process.jpg"/>
+	<img width="800" height="381" src="https://github.com/CnDE-M/Psychtoolbox3-3d_Anaglyph_RDS/blob/master/image/experiment_process.JPG"/>
 </div>
 
 [1] Practice Session
 	This is to help subjects familiar with the experiments, but also the validation of subjects' response.
 
-+ 1. 
-	Vision Field: Central;
-	Correlation: Full-Correlated
-    RDS frame: 1 static, 2s per frame.
-	Trial number per condition: 10;
++ Pratice 1
 
-+ 2. 
-	Vision Field: Central;
-	Correlation: Full-Correlated
-    RDS frame: 15 dynamic, 0.1s per frame.
-	Trial number per condition: 10;
+	- Vision Field: Central;
+	- Correlation: Full-Correlated;
+	- RDS frame: 1 static, 2s per frame;
+	- Trial number per condition: 10;
 
-+ 3. 
-	Vision Field: Central + Peripheral;
-	Correlation: Full-Correlated
-    RDS frame: 15 dynamic, 0.1s per frame.
-	Trial number per condition: 10;
++ Practice 2
+
+	- Vision Field: Central;
+	- Correlation: Full-Correlated
+        - RDS frame: 15 dynamic, 0.1s per frame.
+	- Trial number per condition: 10;
+
++ Practice 3 
+
+	- Vision Field: Central + Peripheral;
+	- Correlation: Full-Correlated
+    	- RDS frame: 15 dynamic, 0.1s per frame.
+	- Trial number per condition: 10;
 	In ramdon order;
 
-+ 4. 
-	Vision Field: Central + Peripheral;
-	Correlation: Full-Correlated + Half-Correlated + Anti-Correlated
-    RDS frame: 15 dynamic, 0.1s per frame.
-	Trial number per condition: 1;
++ Practice 4
+	
+	- Vision Field: Central + Peripheral;
+	- Correlation: Full-Correlated + Half-Correlated + Anti-Correlated
+	- RDS frame: 15 dynamic, 0.1s per frame.
+	- Trial number per condition: 1;
 	In random order
 
 If correctness in Practice 1-3 all higher than 90%, then subject can start to Practice 4 and all formal Experiments.
@@ -97,67 +101,75 @@ If correctness in Practice 1-3 all higher than 90%, then subject can start to Pr
 [2] Formal Experiment
 This is to help subjects familiar with the experiments, but also the validation of subjects' response.
 
-+ 1. 
-	Vision Field: Central + Peripheral;
-	Correlation: Full-Correlated + Half-Correlated + Anti-Correlated
-    RDS frame: 15 dynamic, 0.1s per frame.
-	Trial number per condition: 1;
-	In random order;
++ Experiment 1
 
-+ 2. 
-	To test if vision field affect length perception
-    -> Dot size, ring size, cross size, cross-to-disk distance, disparity distance are halved in central vision trials.
+	- Vision Field: Central + Peripheral;
+	- Correlation: Full-Correlated + Half-Correlated + Anti-Correlated
+        - RDS frame: 15 dynamic, 0.1s per frame.
+	- Trial number per condition: 1;
+	- In random order;
+
++ Experiment 2
+
+To test if vision field affect length perception
+-> Dot size, ring size, cross size, cross-to-disk distance, disparity distance are halved in central vision trials.
 
 
-+ 3. 
-	To test if vision field affect length perception
-    -> Dot size, ring size, cross size, cross-to-disk distance are halved in central vision trials; disparity is doubled in peripheral vision trials.
++ Experiment 3
 
-+ 4. 
-	Same setting as Experiment 2
-	No dot is generatedn in r and R<sub>1</sub> radium range.
+To test if vision field affect length perception
+-> Dot size, ring size, cross size, cross-to-disk distance are halved in central vision trials; disparity is doubled in peripheral vision trials.
 
-+ 5.
-	Same setting as Experiment 3
-	No dot is generatedn in r and R<sub>1</sub> radium range.
++ Experiment 4
+
+Same setting as Experiment 2
+No dot is generatedn in r and R<sub>1</sub> radium range.
+
++ Experiment 5
+
+Same setting as Experiment 3
+No dot is generatedn in r and R<sub>1</sub> radium range.
 
 
 ### Script and Function
 
-"StereoVision_expr_Anaglyph_3D.m"
-	Run.
-	Process all practice and experiments in sequence.
-	For each session, call functions including:
+"StereoVision_expr_Anaglyph_3D.m":
 
-+ "expr_para_generator.m"
-	Save and randomly generate parameters for each experiments;
+> Run.
+> Process all practice and experiments in sequence.
+> For each session, call functions including:
+
++ "expr_para_generator.m":
+
+> Save and randomly generate parameters for each experiments;
 
 + "load_trials.m"
-	Load parameters in sequence to generate each trial;
-	- Pre-fixation Stage:
-	A fixation cross with hint on left and right side.
-	- Fixation Stage:
-	The fixation cross keep present.
-	Call ""anaglyph_3D_trial.m" to draw elements on screen. 15 independent RDS frames popping out with equal intervals, (in Practice 1, RDS frame are static).
-	After presenting, subject reponses on plane depth order are collected.
+
+> Load parameters in sequence to generate each trial;
+> - Pre-fixation Stage:
+> A fixation cross with hint on left and right side.
+> - Fixation Stage:
+> The fixation cross keep present.
+> Call ""anaglyph_3D_trial.m" to draw elements on screen. 15 independent RDS frames popping out with equal intervals, (in Practice 1, RDS frame are static).
+> After presenting, subject reponses on plane depth order are collected.
 
 + "anaglyph_3D_trial.m"
-	Draw all elements composed of each RDS frame.
 
-	Below shows one RDS frame (with no anaglyph filter)
+> Draw all elements composed of each RDS frame.
+> Below shows one RDS frame (with no anaglyph filter)
 
 <div align=center>
-	<img width="700" height="530" src="trial_example.jpg"/>
+	<img width="700" height="530" src="https://github.com/CnDE-M/Psychtoolbox3-3d_Anaglyph_RDS/blob/master/image/trial_example.jpg"/>
 </div>
 
 
 + "angle_to_pixel.m"
-	All length are in vision angle unit. The function is to convert vision angle to pixel.
 
-	Below explains the convertion calculation:
+> All length are in vision angle unit. The function is to convert vision angle to pixel.
+> Below explains the convertion calculation:
 
 <div align=center>
-	<img width="1000" height="340" src="angle_convertion.jpg"/>
+	<img width="1000" height="340" src="https://github.com/CnDE-M/Psychtoolbox3-3d_Anaglyph_RDS/blob/master/image/angle_convertion.JPG"/>
 </div>
 
 
