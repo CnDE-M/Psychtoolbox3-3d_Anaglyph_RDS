@@ -133,17 +133,17 @@ No dot is generatedn in r and R<sub>1</sub> radium range.
 
 ### Script and Function
 
-"StereoVision_expr_Anaglyph_3D.m":
+**"StereoVision_expr_Anaglyph_3D.m":**
 
 > Run.
 > Process all practice and experiments in sequence.
 > For each session, call functions including:
 
-+ "expr_para_generator.m":
++ **"expr_para_generator.m":**
 
 > Save and randomly generate parameters for each experiments;
 
-+ "load_trials.m"
++ **"load_trials.m"**
 
 > Load parameters in sequence to generate each trial;
 > - Pre-fixation Stage:
@@ -153,7 +153,7 @@ No dot is generatedn in r and R<sub>1</sub> radium range.
 > Call ""anaglyph_3D_trial.m" to draw elements on screen. 15 independent RDS frames popping out with equal intervals, (in Practice 1, RDS frame are static).
 > After presenting, subject reponses on plane depth order are collected.
 
-+ "anaglyph_3D_trial.m"
++ **"anaglyph_3D_trial.m"**
 
 > Draw all elements composed of each RDS frame.
 > Below shows one RDS frame (with no anaglyph filter)
@@ -163,7 +163,7 @@ No dot is generatedn in r and R<sub>1</sub> radium range.
 </div>
 
 
-+ "angle_to_pixel.m"
++ **"angle_to_pixel.m"**
 
 > All length are in vision angle unit. The function is to convert vision angle to pixel.
 > Below explains the convertion calculation:
@@ -174,7 +174,7 @@ No dot is generatedn in r and R<sub>1</sub> radium range.
 
 
 
-## Question
+## Questions
 
 1. Why central fixation cross shown in both peripheral vision trials and central vision trials?
 
